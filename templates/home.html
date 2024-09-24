@@ -1,0 +1,309 @@
+<style>
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: white !important;
+}
+ul{
+    list-style-type: none;
+}
+
+/*header***********************************************/
+.header{
+  width: 100%;
+    height: 50px;
+    float: left;
+    position: fixed;
+    background: whitesmoke;
+    z-index: 999;
+    border-bottom: 1.5px solid  rgb(230, 229, 229);
+}
+.header>ul{
+    width: 80%;
+    height: 100%;
+    margin:0 10%;
+}
+.header>ul>li{
+    width: 20%;
+    height: 100%;
+    line-height: 35px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition: .7s;
+    color: black;
+}
+.header>ul>li>a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Inconsolata', monospace;
+}
+.header>ul>li:hover{
+    background: black;
+    color: whitesmoke !important;
+}
+.header>ul>li:nth-of-type(1):hover,
+.header>ul>li:nth-of-type(2):hover,
+.header>ul>li:nth-of-type(4):hover,
+.header>ul>li:nth-of-type(5):hover
+
+{
+    background: black;
+    transition: .7s;
+}
+.header>ul>li:nth-of-type(1):hover>a,
+.header>ul>li:nth-of-type(2):hover>a,
+.header>ul>li:nth-of-type(4):hover>a,
+.header>ul>li:nth-of-type(5):hover>a
+{
+    color: white;
+    transition: .7s;
+}
+.header>ul>li:nth-last-of-type(3) h3{
+    width: 30%;
+    float: left;
+    color: #4070f4;
+    font-family: 'Inconsolata', monospace;
+}
+.header>ul>li:nth-last-of-type(3) h3:nth-of-type(2){
+    width: 10%;
+    float: left;
+    color: #4070f4;
+    font-family: 'Inconsolata', monospace;
+    margin-left: 5%;
+}
+.header>ul>li:nth-last-of-type(3) h3:nth-of-type(3){
+    width: 10%;
+    float: left;
+    color: #4070f4;
+    font-family: 'Inconsolata', monospace;
+    margin-left: 10%;
+}
+
+.header>ul>li:nth-last-of-type(3):hover{
+    cursor: default;
+    background: whitesmoke;
+}
+
+/*background***********************************************/
+#background{
+    background-image: url("{{ url_for('static', filename='background.jpg') }}");
+    width: 100%;
+    height: auto;
+    min-height: 680px;
+    float: left;
+    margin-top: 50px;
+}
+#background>div{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: whitesmoke;
+    float: left;
+}
+#background>div :nth-of-type(1){
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+    margin-top: 15%;
+}
+#background>div :nth-of-type(2){
+    font-family: 'Noto Serif', serif;
+    font-size: 80px;
+}
+#background>div :nth-of-type(3){
+    width: 15%;
+    height: 30px;
+    margin-left: 43%;
+    margin-top: 5%;
+    border-radius: 106px 106px 106px 106px;
+    background: whitesmoke;
+    padding: 4px 0px 0px 0px;
+    transition: 0.7s;
+}
+#background>div :nth-of-type(3)>a{
+    font-size: 15px;
+    font-family: 'Inconsolata', monospace;
+    color: black;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 0.7s;
+    text-decoration: none;
+}
+#background>div :nth-of-type(3):hover{
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+}
+#background>div :nth-of-type(3):hover>a{
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
+/*about***********************************************/
+#about{
+    height: auto;
+    min-height: 500px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+#about>div{
+    width: 60%;
+    margin: 5% 20%;
+}
+#about>div>h6{
+    font-size: 75px;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: capitalize;
+    color: black;
+}
+#about>div>p{
+    color: black;
+    font-size: 25px;
+}
+#about>div :nth-of-type(2){   
+    font-size: 25px;
+    font-family: 'Merienda', cursive;
+    color: #2d4da4;
+;
+}
+#about>div :nth-of-type(2) :nth-child(2){
+    width: 10%;
+    float: left;
+    height: 1px;
+    margin: 2% 25%;
+    background:#b9afa1;
+    position: absolute;
+}
+#about>div :nth-of-type(3){
+    margin-top: 8%;
+    color: #6f727b;
+    font-size: 20px;
+}
+#about>div>div{
+    width: 25%;
+    height: 30px;
+    margin:5% 38%;
+    border-radius: 106px 106px 106px 106px;
+    color: whitesmoke;
+    background:#4070f4;
+    padding: 4px 0px 0px 0px;
+    transition: 0.7s;
+}
+#about>div>div>a{
+    color: whitesmoke;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 0.7s;
+    font-size: 15px;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+#about>div>div:hover{
+    cursor: pointer;
+    background: black;
+}
+
+
+/*footer***********************************************/
+#footer{
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-color: whitesmoke;
+}
+#footer>img{
+    width: 15%;
+    margin: 1% 5%;
+    float: left;
+}
+#footer>p{
+    width: 30%;
+    margin: 2% 5%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+}
+#footer>ul{
+    width: 20%;
+    margin: 2% 5%;
+    float: left;
+}
+#footer>ul>li{
+    width : 45px;
+    height: 45px;
+    margin-left: 5%;
+    float: left;
+    background: #4070f4;
+    border-radius: 2px 2px 2px 2px;
+}
+#footer>ul>li i{
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px
+}
+</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Project</title>
+  </head>
+  <body>
+    <div class="header">
+      <ul class="nav-link">
+        <li><a href="/home">Home Page</a></li>
+         <li><a href="/index_home">AI Text Detector</a></li>
+        <li><span><h3>GPT</h3><h3><i class="fa fa-code" aria-hidden="true"></i></h3><h3>CHECK</h3></span></li>
+        <li><a href="/spellcheck">Spell Check</a></li>
+        <li><a href="/logoff">Logout</a></li>
+      </ul>
+    </div>
+    <div id='background'>
+      <div>
+          <div>AI Text Generated Detector</div>
+          <div>GPT CHECK</div>
+          <div><a href="{{ url_for('index_home') }}">Try the tool</a></div>
+      </div>
+  </div>
+  <div id='about'>
+    <div>
+        <h6>About our app</h6>
+        <p><i class="fa fa-laptop" aria-hidden="true"></i></p>
+        <p>A cloud-based application to detect ChatGPT-generated scientific text and distinguish it from human-written text using machine learning techniques </p>
+        <p>The use of artificial intelligence is becoming increasingly prevalent in creating various types of data. However, there is a need to distinguish between data that has been generated by humans and data that has been generated by AI. Our proposed approach is to train a model using predefined datasets and deploy this model on a cloud-based service to predict the accuracy of text and determine whether it was created by a human or by AI.</p>
+        <div><a href="https://docs.google.com/presentation/d/1Cm9nY8eF_FhvfxefrLnGubtOkCSmFUC4dERv6GpUqjs/edit#slide=id.p1">our approach</a></div>
+    </div>
+</div>
+<div id='footer'>
+  <img src="{{ url_for('static', filename='AI.png') }}" alt="">
+  <p>© COPYRIGHT 2023   |   THEME BY OUR TEAM   |   ALL RIGHTS RESERVED   </p>
+  <ul>
+      <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
